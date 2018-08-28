@@ -1,0 +1,6 @@
+0.10014
+perl(Class::XSAccessor)
+perl(Module::Runtime)
+perl(Sub::Name)
+perl(Sub::Uplevel)
+perl(Test::Exception)
