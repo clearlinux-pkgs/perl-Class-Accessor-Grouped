@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Accessor-Grouped
 Version  : 0.10014
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Summary  : 'Lets you build groups of accessors'
