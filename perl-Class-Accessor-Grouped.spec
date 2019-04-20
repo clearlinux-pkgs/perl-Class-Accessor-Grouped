@@ -4,10 +4,10 @@
 #
 Name     : perl-Class-Accessor-Grouped
 Version  : 0.10014
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
-Summary  : 'Lets you build groups of accessors'
+Summary  : Lets you build groups of accessors
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -27,6 +27,7 @@ use base 'Class::Accessor::Grouped';
 Summary: dev components for the perl-Class-Accessor-Grouped package.
 Group: Development
 Provides: perl-Class-Accessor-Grouped-devel = %{version}-%{release}
+Requires: perl-Class-Accessor-Grouped = %{version}-%{release}
 
 %description dev
 dev components for the perl-Class-Accessor-Grouped package.
