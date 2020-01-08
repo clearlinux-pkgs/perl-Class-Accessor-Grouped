@@ -4,12 +4,13 @@
 #
 Name     : perl-Class-Accessor-Grouped
 Version  : 0.10014
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
-Summary  : Lets you build groups of accessors
+Summary  : 'Lets you build groups of accessors'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Class-Accessor-Grouped-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Class::XSAccessor)
 BuildRequires : perl(Module::Runtime)
@@ -33,14 +34,24 @@ Requires: perl-Class-Accessor-Grouped = %{version}-%{release}
 dev components for the perl-Class-Accessor-Grouped package.
 
 
+%package perl
+Summary: perl components for the perl-Class-Accessor-Grouped package.
+Group: Default
+Requires: perl-Class-Accessor-Grouped = %{version}-%{release}
+
+%description perl
+perl components for the perl-Class-Accessor-Grouped package.
+
+
 %prep
 %setup -q -n Class-Accessor-Grouped-0.10014
+cd %{_builddir}/Class-Accessor-Grouped-0.10014
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -50,7 +61,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -70,8 +81,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Class/Accessor/Grouped.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Class::Accessor::Grouped.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Class/Accessor/Grouped.pm
