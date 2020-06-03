@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Accessor-Grouped
 Version  : 0.10014
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Class-Accessor-Grouped-0.10014.tar.gz
 Summary  : 'Lets you build groups of accessors'
@@ -88,4 +88,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Class/Accessor/Grouped.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Class/Accessor/Grouped.pm
